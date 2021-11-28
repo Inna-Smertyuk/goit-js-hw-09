@@ -10,11 +10,13 @@ refs.startButton.addEventListener('click', () => {
         document.body.style.backgroundColor = getRandomHexColor();
     }, 1000);
     refs.startButton.disabled = true;
+    refs.stopButton.disabled = false;
 });
 
 refs.stopButton.addEventListener('click', () => {
     clearInterval(timerId);
     refs.startButton.disabled = false;
+    refs.stopButton.disabled = true;
 });
 
 //для генерации случайного цвета
